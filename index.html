@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsa Beauty Studio | Luxury Nails & Lash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --maroon: #4a0404;
+            --gold: #d4af37;
+            --cream: #fcf9f2;
+            --dark: #1a1a1a;
+            --white: #ffffff;
+            --glow: rgba(212, 175, 55, 0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--cream); 
+            color: var(--dark);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        header.harsa-hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('file:///Users/gerryyan/Downloads/Nail%20Art%20start%2070k%20%E2%80%BC%EF%B8%8FSpecial%20disc%20untuk%20member%20baru%E2%9C%A8%F0%9F%93%8DGMaps%20-%20Harsa%20Beauty%20StudioCikeas%20Udik%20(de%20(1).jpg') center/cover no-repeat fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            letter-spacing: 15px;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: -80px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--gold);
+            transition: 0.4s ease;
+        }
+
+        .promo-box {
+            background: var(--maroon);
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .promo-box::after {
+            content: ''; position: absolute; top: -50%; left: -100%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg); animation: shine 4s infinite;
+        }
+
+        @keyframes shine { 0% { left: -100%; } 100% { left: 100%; } }
+
+        .main-container { max-width: 1200px; margin: 0 auto 50px; padding: 0 20px; }
+
+        .price-card {
+            background: var(--white);
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            margin-bottom: 80px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .category h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .menu-item:hover { color: var(--gold); transform: translateX(5px); }
+        .item-dots { flex: 1; border-bottom: 1px dotted #ccc; margin: 0 10px; height: 14px; }
+        .item-price { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--maroon); }
+
+        .gallery-masonry {
+            columns: 4;
+            column-gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #eee;
+            transition: 0.4s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: 0.6s;
+        }
+
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .cta-section {
+            background: var(--maroon);
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+        }
+
+        .wa-btn {
+            background: var(--gold);
+            color: white;
+            padding: 22px 55px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+            font-weight: 800;
+            border-radius: 50px;
+            animation: pulse-gold 2s infinite;
+        }
+
+        @keyframes pulse-gold {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--glow); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        @media (max-width: 1024px) { .gallery-masonry { columns: 3; } }
+        @media (max-width: 768px) { 
+            .gallery-masonry { columns: 2; } 
+            .cta-section { clip-path: none; padding: 80px 20px; }
+            .price-card { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="harsa-hero">
+        <div class="hero-content" data-aos="zoom-out" data-aos-duration="2000">
+            <h1>HARSA</h1>
+            <p style="letter-spacing: 8px; color: var(--gold); font-style: italic; font-weight: 300;">LUXURY NAILS & LASH STUDIO</p>
+        </div>
+    </header>
+
+    <div class="info-grid">
+        <div class="info-box" data-aos="fade-up" data-aos-delay="100">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--maroon);">The Experience</h3>
+            <p style="font-size: 0.85rem; line-height: 1.8; margin-top: 10px;">Manicure, Pedicure, Custom Nail Art, dan Lash Lift premium dengan layanan profesional 24 jam.</p>
+        </div>
+        
+        <a href="#target-course" style="text-decoration: none; display: block;">
+            <div class="info-box promo-box" data-aos="fade-up" data-aos-delay="200">
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: var(--gold);">Information</p>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0; line-height: 1.4;">ONLINE COURSE:<br>BASIC TO PRO NAIL ART</h2>
+                <p style="font-size: 0.85rem; color: var(--gold); margin-top: 10px;">klick disni untuk menuju informasi!</p>
+            </div>
+        </a>
+
+
+        <div class="info-box" data-aos="fade-up" data-aos-delay="300">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--maroon);">Studio Info</h3>
+            <p style="font-size: 0.85rem; margin-top: 5px;">📍 Cikeas Udik, Gunung Putri, Bogor</p>
+            <p style="font-size: 0.85rem;">🕒 24 Hours (By Appointment)</p>
+        </div>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="price-card" data-aos="fade-up">
+            <center>
+                <h2 style="font-family: 'Cinzel', serif; color: var(--maroon); font-size: 2.2rem;">Price List</h2>
+                <div style="width: 60px; height: 2px; background: var(--gold); margin: 15px auto 40px;"></div>
+            </center>
+
+            <div class="menu-grid">
+                <div class="category">
+                    <h3>Nails Treatment</h3>
+                    <div class="menu-item"><span>Nail Gel Polos (Tangan)</span><div class="item-dots"></div><span class="item-price">70.000</span></div>
+                    <div class="menu-item"><span>Nail Gel Polos (Kaki)</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
+                    <div class="menu-item"><span>French / Cat Eye</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
+                    <div class="menu-item"><span>Glitter Gel</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
+                    <div class="menu-item"><span>Russian Manicure</span><div class="item-dots"></div><span class="item-price">50.000</span></div>
+                    <div class="menu-item"><span>Remove Nail Gel</span><div class="item-dots"></div><span class="item-price">30.000</span></div>
+                    <p style="font-size: 0.7rem; font-style: italic; margin-top: 15px; color: #888;">*Sudah termasuk Manicure/Pedicure standar</p>
+                </div>
+
+                <div class="category">
+                    <h3>Extensions & Combo</h3>
+                    <div class="menu-item"><span>Soft Tip Gel Extension</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
+                    <div class="menu-item"><span>Half Tip Extension</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
+                    <div class="menu-item"><span>Overlay Gel</span><div class="item-dots"></div><span class="item-price">65.000</span></div>
+                    
+                    <div style="margin-top: 25px; background: #fffaf0; padding: 15px; border-radius: 8px; border-left: 3px solid var(--gold);">
+                        <p style="font-weight: 600; font-size: 0.8rem; margin-bottom: 10px; color: var(--maroon);">BEST VALUE COMBO:</p>
+                        <div class="menu-item"><span>Gel + Soft Tip/Over</span><div class="item-dots"></div><span class="item-price">130.000</span></div>
+                        <div class="menu-item"><span>Cat Eye/French + Tip</span><div class="item-dots"></div><span class="item-price">160.000</span></div>
+                        <div class="menu-item"><span>Glitter + Tip/Over</span><div class="item-dots"></div><span class="item-price">150.000</span></div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Lash & Add-ons</h3>
+                    <div class="menu-item"><span>Lash Lift Natural</span><div class="item-dots"></div><span class="item-price">85.000</span></div>
+                    <div class="menu-item"><span>Lash Lift & Tint</span><div class="item-dots"></div><span class="item-price">100.000</span></div>
+                    
+                    <div style="margin-top: 25px;">
+                        <p style="font-weight: 600; font-size: 0.8rem; margin-bottom: 10px; color: var(--gold);">ADDITIONAL ART (PER JARI):</p>
+                        <div class="menu-item"><span>Chrome / Aurora</span><div class="item-dots"></div><span class="item-price">3.000</span></div>
+                        <div class="menu-item"><span>Ombre / Blush Art</span><div class="item-dots"></div><span class="item-price">5.000</span></div>
+                        <div class="menu-item"><span>3D Flowers / Shells</span><div class="item-dots"></div><span class="item-price">4k - 6k</span></div>
+                        <div class="menu-item"><span>Difficult Art</span><div class="item-dots"></div><span class="item-price">5k - 10k</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee; font-size: 0.75rem; color: #666;">
+                <p style="font-weight: 700; margin-bottom: 10px; color: var(--dark);">PLEASE NOTE:</p>
+                <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                    <li>✨ Reservasi wajib melalui WhatsApp.</li>
+                    <li>🕒 Harap datang tepat waktu (Toleransi 15 menit).</li>
+                    <li>💳 Pembayaran menerima Cash & Transfer/QRIS.</li>
+                    <li>📍 Lokasi: Cikeas Udik, Bogor.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <p style="color: var(--gold); letter-spacing: 5px; font-size: 0.7rem;">ESTHETIC PORTFOLIO</p>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--maroon);">Studio Gallery</h2>
+        </div>
+
+        <div class="gallery-masonry">
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/a/5/a592e96d-6abb-43ab-aef2-da6899fbac6c.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/6/a/6a168153-8708-4ea5-8324-b254c1c9dcd1.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/5/4/543401c0-d0c8-4bdd-8992-4c97acd0df64.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/e/9/e996eb95-8200-4285-bd03-4efa70e9d070.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/5/b/5b4ef75f-f896-488b-bd9e-377f08f85adb.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/4/7/47b410d6-db3d-47f7-9d4e-8b871d67b13c.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/9/2/92e5ca68-3527-4401-8901-ad1faac469d7.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/a/f/af61422d-5d83-4414-82a9-f82ea52400ac.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/9/c/9c16e431-5838-488a-bac0-839cdb8674f8.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/1/d/1d571297-3e1d-4bcf-9955-97e9ad69e812.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/c/f/cf98d6f3-1065-4b0d-a9c8-c3b32b72ab98.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/2/0/20b1279b-4de3-4f90-8bb2-0164bb875963.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/9/0/9041a495-896a-4901-b7a2-80dab4a88526.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/0/5/05559c8b-8ddb-4f97-aca0-5090b7e12870.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/9/0/90662b76-26cc-416a-bc38-4058f7cc5197.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/e/6/e63306fa-d9ac-46e4-bd18-e0b45ce1d7d2.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/3/5/35774121-67dc-44cb-8c0c-a660408a5eb5.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/3/c/3cbce33a-285d-4164-a0a1-a92a6ae279ca.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/e/6/e6a7b013-225d-4d87-b5cb-6f68470998b3.jpg"></div>
+            <div class="gallery-item" data-aos="fade-up"><img src="file:///Users/gerryyan/Library/Group%20Containers/group.net.whatsapp.WhatsApp.shared/Message/Media/6282224141347@s.whatsapp.net/8/c/8c99adca-689e-4576-a55d-2f9cba3f1518.jpg"></div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div data-aos="zoom-in">
+            <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem;">Luxury Awaits You</h2>
+            <p style="margin: 20px 0; opacity: 0.8;">Ciptakan kuku impian Anda bersama Harsa Studio.</p>
+            <a href="https://wa.me/6281533290107" class="wa-btn">RESERVE NOW</a>
+            
+            <div style="margin-top: 40px;">
+                <a href="https://instagram.com/harsa_beautystudio" target="_blank" style="color: var(--gold); text-decoration: none; margin: 0 15px; font-weight: 600;">INSTAGRAM</a>
+                <a href="https://tiktok.com/@harsa_beautystudio" target="_blank" style="color: var(--gold); text-decoration: none; margin: 0 15px; font-weight: 600;">TIKTOK</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="target-course" class="course-section bg-white text-gray-800 font-sans rounded-2xl overflow-hidden mb-20 shadow-sm border border-gray-100 max-w-6xl mx-auto mt-10">
+        <header class="bg-[#fcf9f2] py-12 px-4 text-center border-b border-gray-100">
+            <h2 class="text-[#d4af37] font-bold tracking-widest uppercase text-sm mb-2">Online Course</h2>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#4a0404] mb-4">BASIC TO PRO<br>NAIL ART COURSE</h1>
+            <p class="text-lg text-gray-600 italic">By harsa_beautystudio</p>
+        </header>
+
+        <main class="max-w-4xl mx-auto p-6 -mt-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <section class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#4a0404]">
+                    <h3 class="text-xl font-bold mb-6 flex items-center text-[#4a0404]">
+                        <span class="bg-[#4a0404] text-white p-2 rounded-lg mr-3"><i class="fas fa-book-open"></i></span>
+                        Materi Kursus
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Tahapan Manicure</li>
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Pengaplikasian Nail Gel Polish</li>
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Pengaplikasian Nail Art Super Awet</li>
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Pengaplikasian Design Nails</li>
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Pengaplikasian Cat Eye Nails</li>
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Pengaplikasian Marble Nails</li>
+                        <li class="flex items-center"><i class="fas fa-check text-[#d4af37] mr-3"></i> Pengaplikasian Chrome Nails</li>
+                    </ul>
+                </section>
+
+                <div class="space-y-6">
+                    <div class="bg-[#4a0404] text-white p-8 rounded-2xl shadow-xl transform rotate-1">
+                        <p class="text-sm line-through opacity-80">Harga Normal: 750K</p>
+                        <div class="text-5xl font-black mb-2 text-[#d4af37]">500K</div>
+                        <p class="font-bold bg-white text-[#4a0404] inline-block px-3 py-1 rounded">PROMO!!</p>
+                        <p class="mt-4 text-sm font-medium italic">* Bebas tentukan waktu</p>
+                    </div>
+
+                    <section class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#d4af37]">
+                        <h3 class="text-xl font-bold mb-6 flex items-center text-[#4a0404]">
+                            <span class="bg-[#d4af37] text-white p-2 rounded-lg mr-3"><i class="fas fa-gift"></i></span>
+                            Benefit
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• E-certificate</li>
+                            <li>• List Produk Recommended</li>
+                            <li>• Info Supplier</li>
+                            <li>• Free Record</li>
+                            <li>• Free Konsultasi</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <section class="mt-12 bg-[#fcf9f2] p-6 rounded-xl border-l-4 border-[#d4af37]">
+                <h4 class="font-bold mb-3 uppercase tracking-wider text-sm text-[#4a0404]">Catatan Penting:</h4>
+                <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
+                    <li>Kursus Online dilakukan via Zoom / WhatsApp.</li>
+                    <li>Kursus bersifat private (individu).</li>
+                    <li>Apabila sudah booking jadwal, tidak bisa cancel (DP Hangus).</li>
+                </ul>
+            </section>
+
+            <section class="mt-12 text-center pb-12">
+                <h3 class="text-lg font-bold mb-6">Informasi Lebih Lanjut:</h3>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="https://wa.me/6281533290107" class="flex items-center justify-center bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition" style="text-decoration:none">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> whatsapp
+                    </a>
+                    <a href="https://www.instagram.com/harsa_beautystudio" class="flex items-center justify-center bg-[#4a0404] text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition border border-[#d4af37]" style="text-decoration:none">
+                        <i class="fab fa-instagram mr-2 text-xl"></i> instagram
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.7rem; letter-spacing: 2px;">
+        &copy; 2026 HARSA BEAUTY STUDIO. ALL RIGHTS RESERVED.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+
+</body>
+</html>
