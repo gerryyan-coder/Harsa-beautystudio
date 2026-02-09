@@ -166,6 +166,48 @@
             animation: pulse-gold 2s infinite;
         }
 
+        /* Detail Info Styles from Photos */
+        .treatment-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .detail-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--maroon);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .detail-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--maroon);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .detail-item {
+            margin-bottom: 15px;
+        }
+
+        .detail-item h4 {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .detail-item p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
         @keyframes pulse-gold {
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--glow); }
             70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
@@ -185,20 +227,20 @@
     <header class="harsa-hero">
         <div class="hero-content" data-aos="zoom-out" data-aos-duration="2000">
             <h1>HARSA</h1>
-            <p style="letter-spacing: 8px; color: var(--gold); font-style: italic; font-weight: 300;">LUXURY NAILS & LASH STUDIO</p>
+            <p style="letter-spacing: 8px; color: var(--gold); font-style: italic; font-weight: 300;">NAILS,LASH,BROW COZY HOME STUDIO</p>
         </div>
     </header>
 
     <div class="info-grid">
         <div class="info-box" data-aos="fade-up" data-aos-delay="100">
             <h3 style="font-family: 'Cinzel', serif; color: var(--maroon);">The Experience</h3>
-            <p style="font-size: 0.85rem; line-height: 1.8; margin-top: 10px;">Manicure, Pedicure, Custom Nail Art, dan Lash Lift premium dengan layanan profesional 24 jam.</p>
+            <p style="font-size: 0.85rem; line-height: 1.8; margin-top: 10px;">Nail art, Lash Lift & Tint, Brow Bomber (Lamination & Tint) premium dengan alat wu dan bahan yang aman, dikerjakan oleh professional bersertifikasi.</p>
         </div>
         
         <a href="#target-course" style="text-decoration: none; display: block;">
             <div class="info-box promo-box" data-aos="fade-up" data-aos-delay="200">
                 <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: var(--gold);">Information</p>
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0; line-height: 1.4;">ONLINE COURSE:<br>BASIC TO PRO NAIL ART</h2>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0; line-height: 1.4;">Kursus Privat Nail Art,<br>Lash B Lift, Brow Bomber</h2>
                 <p style="font-size: 0.85rem; color: var(--gold); margin-top: 10px;">klick disni untuk menuju informasi!</p>
             </div>
         </a>
@@ -212,6 +254,56 @@
     </div>
 
     <div class="main-container">
+
+        <div class="treatment-detail-grid" data-aos="fade-up">
+            <div class="detail-box">
+                <h3>BROW BOMBER <br><small style="font-size: 0.7rem; font-family: 'Montserrat'; color: var(--gold); letter-spacing: 2px;">BROW SHAPING & TINT</small></h3>
+                <div class="detail-item">
+                    <h4>Membentuk & merapikan alis secara presisi</h4>
+                    <p>Alis disesuaikan dengan bentuk wajah agar tampak simetris dan proporsional.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Efek alis lebih rapi & bervolume</h4>
+                    <p>Rambut alis diarahkan agar terlihat penuh, teratur, dan tidak berantakan.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Diperkaya keratin</h4>
+                    <p>Membantu menutrisi, menjaga kelembapan, dan memperkuat bulu mata agar tidak mudah rapuh.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Pewarnaan dengan tint henna</h4>
+                    <p>Memberi warna lembut yang membuat alis tampak lebih tegas dan seimbang.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Lentik tahan 3-5 minggu</h4>
+                    <p>Hasil bertahan mengikuti siklus pertumbuhan alami alis.</p>
+                </div>
+            </div>
+
+            <div class="detail-box">
+                <h3>LASHLIFT TINT & KERATIN</h3>
+                <div class="detail-item">
+                    <h4>Melentikkan bulu mata alami tanpa extension</h4>
+                    <p>Proses mengangkat dan melentikkan bulu mata asli dari akar hingga ujung, tanpa tambahan bulu mata palsu, sehingga hasilnya terlihat natural.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Halal & aman, bisa untuk wudhu & shalat</h4>
+                    <p>Formulasi halal, tidak membentuk lapisan tebal, sehingga aman untuk wudhu dan shalat.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Diperkaya keratin</h4>
+                    <p>Membantu menutrisi, menjaga kelembapan, dan memperkuat bulu mata agar tidak mudah rapuh.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Pewarnaan dengan tint</h4>
+                    <p>Memberi efek lebih hitam, tegas, dan rapi.</p>
+                </div>
+                <div class="detail-item">
+                    <h4>Lentik tahan 4-6 minggu</h4>
+                    <p>Lentik dan warna bertahan lama mengikuti siklus alami bulu mata.</p>
+                </div>
+            </div>
+        </div>
         
         <div class="price-card" data-aos="fade-up">
             <center>
@@ -224,38 +316,48 @@
                     <h3>Nails Treatment</h3>
                     <div class="menu-item"><span>Nail Gel Polos (Tangan)</span><div class="item-dots"></div><span class="item-price">70.000</span></div>
                     <div class="menu-item"><span>Nail Gel Polos (Kaki)</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
-                    <div class="menu-item"><span>French / Cat Eye</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
-                    <div class="menu-item"><span>Glitter Gel</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
+                    <div class="menu-item"><span>French</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
+                    <div class="menu-item"><span>Cat Aye</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
+                    <div class="menu-item"><span>Glitter</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
                     <div class="menu-item"><span>Russian Manicure</span><div class="item-dots"></div><span class="item-price">50.000</span></div>
                     <div class="menu-item"><span>Remove Nail Gel</span><div class="item-dots"></div><span class="item-price">30.000</span></div>
-                    <p style="font-size: 0.7rem; font-style: italic; margin-top: 15px; color: #888;">*Sudah termasuk Manicure/Pedicure standar</p>
+                    <div class="menu-item"><span>Remove Extension</span><div class="item-dots"></div><span class="item-price">40.000</span></div>
                 </div>
 
                 <div class="category">
-                    <h3>Extensions & Combo</h3>
-                    <div class="menu-item"><span>Soft Tip Gel Extension</span><div class="item-dots"></div><span class="item-price">80.000</span></div>
-                    <div class="menu-item"><span>Half Tip Extension</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
-                    <div class="menu-item"><span>Overlay Gel</span><div class="item-dots"></div><span class="item-price">65.000</span></div>
+                    <h3>Brow</h3>
+                    <div class="menu-item"><span>Eyebrow Shaping</span><div class="item-dots"></div><span class="item-price">10.000</span></div>
+                    <div class="menu-item"><span>Brow Bomber</span><div class="item-dots"></div><span class="item-price">100.000</span></div>
+                    <div class="menu-item"><span>Brow Lamination</span><div class="item-dots"></div><span class="item-price">90.000</span></div>
+                    <div class="menu-item"><span>Brow Henna</span><div class="item-dots"></div><span class="item-price">65.000</span></div>
                     
                     <div style="margin-top: 25px; background: #fffaf0; padding: 15px; border-radius: 8px; border-left: 3px solid var(--gold);">
                         <p style="font-weight: 600; font-size: 0.8rem; margin-bottom: 10px; color: var(--maroon);">BEST VALUE COMBO:</p>
-                        <div class="menu-item"><span>Gel + Soft Tip/Over</span><div class="item-dots"></div><span class="item-price">130.000</span></div>
-                        <div class="menu-item"><span>Cat Eye/French + Tip</span><div class="item-dots"></div><span class="item-price">160.000</span></div>
-                        <div class="menu-item"><span>Glitter + Tip/Over</span><div class="item-dots"></div><span class="item-price">150.000</span></div>
+                        <div class="menu-item"><span>Gel Polish (Polos) + Soft Tip Extension / Overlay</span><div class="item-dots"></div><span class="item-price">130.000</span></div>
+                        <div class="menu-item"><span>Cat Eye / French + Soft Tip Extension / Overlay</span><div class="item-dots"></div><span class="item-price">160.000</span></div>
+                        <div class="menu-item"><span>Glitter + Soft Tip Extension / Overlay</span><div class="item-dots"></div><span class="item-price">150.000</span></div>
+                        <p style="font-size: 0.7rem; font-style: italic; margin-top: 15px; color: #888;">*Sudah termasuk Manicure/Pedicure standar</p>
                     </div>
                 </div>
 
                 <div class="category">
                     <h3>Lash & Add-ons</h3>
-                    <div class="menu-item"><span>Lash Lift Natural</span><div class="item-dots"></div><span class="item-price">85.000</span></div>
+                    <div class="menu-item"><span>Lash Lift</span><div class="item-dots"></div><span class="item-price">85.000</span></div>
                     <div class="menu-item"><span>Lash Lift & Tint</span><div class="item-dots"></div><span class="item-price">100.000</span></div>
                     
                     <div style="margin-top: 25px;">
                         <p style="font-weight: 600; font-size: 0.8rem; margin-bottom: 10px; color: var(--gold);">ADDITIONAL ART (PER JARI):</p>
                         <div class="menu-item"><span>Chrome / Aurora</span><div class="item-dots"></div><span class="item-price">3.000</span></div>
+                        <div class="menu-item"><span>Foil</span><div class="item-dots"></div><span class="item-price">2.000</span></div>
+                        <div class="menu-item"><span>Emboss Chrome</span><div class="item-dots"></div><span class="item-price">3.000</span></div>
                         <div class="menu-item"><span>Ombre / Blush Art</span><div class="item-dots"></div><span class="item-price">5.000</span></div>
+                        <div class="menu-item"><span>Marble / Blooming Art</span><div class="item-dots"></div><span class="item-price">4.000</span></div>
                         <div class="menu-item"><span>3D Flowers / Shells</span><div class="item-dots"></div><span class="item-price">4k - 6k</span></div>
+                        <div class="menu-item"><span>Accessories</span><div class="item-dots"></div><span class="item-price">2k - 20k</span></div>
+                        <div class="menu-item"><span>Sticker</span><div class="item-dots"></div><span class="item-price">2k - 5k</span></div>
+                        <div class="menu-item"><span>Simple Art</span><div class="item-dots"></div><span class="item-price">3.000</span></div>
                         <div class="menu-item"><span>Difficult Art</span><div class="item-dots"></div><span class="item-price">5k - 10k</span></div>
+                        <div class="menu-item"><span>French / Glitter / Cat Aye</span><div class="item-dots"></div><span class="item-price">5.000</span></div>
                     </div>
                 </div>
             </div>
@@ -302,7 +404,7 @@
     <section class="cta-section">
         <div data-aos="zoom-in">
             <h2 style="font-family: 'Cinzel', serif; font-size: 2.5rem;">Luxury Awaits You</h2>
-            <p style="margin: 20px 0; opacity: 0.8;">Ciptakan kuku impian Anda bersama Harsa Studio.</p>
+            <p style="margin: 20px 0; opacity: 0.8;">Ciptakan kuku, bulu mata dan alis yg cantik bersama Harsa Beauty Studio.</p>
             <a href="https://wa.me/6281533290107" class="wa-btn">RESERVE NOW</a>
             
             <div style="margin-top: 40px;">
