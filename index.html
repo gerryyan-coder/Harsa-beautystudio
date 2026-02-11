@@ -31,8 +31,11 @@
 
         header.harsa-hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://raw.githubusercontent.com/gerryyan-coder/fotoharsabeauty/main/foto%20web%20harsa/23.jpeg') center/cover no-repeat fixed;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://raw.githubusercontent.com/gerryyan-coder/fotoharsabeauty/main/foto%20web%20harsa/23.jpeg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -220,6 +223,7 @@
             .price-card { padding: 40px 20px; }
             header.harsa-hero {
                 background-attachment: scroll !important;
+                background-position: center top !important;
             }
         }
     </style>
